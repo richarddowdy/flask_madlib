@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Madl Lib Prompt</title>
+        <style type="text/css">
+            label {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Madlibs</h1>
+        <form method="POST">
+            {% for prompt in prompts %}
+                <label>{{ prompt }} : 
+                    <input name="{{ prompt }}"></input>
+                </label>
+            {% endfor %}
+            <button>SUBMIT</button>
+        </form>
+    </body>
+</html> -->
+
+<!-- style="display:block" -->
+
+
+{% extends 'base.html' %}
+
+{% block title %}Mad Libs Prompt{% endblock %}
+
+{% block css %}
+    label {
+        display: block;
+    }
+{% endblock %}
+
+{% block content %}
+    <h1>Madlibs</h1>
+    <form method="POST">
+    {% for prompt in prompts %}
+        <label>{{ prompt }} : 
+            <input name="{{ prompt }}"></input>
+        </label>
+    {% endfor %}
+    <button>SUBMIT</button>
+    </form>
+{% endblock %}
+
+
